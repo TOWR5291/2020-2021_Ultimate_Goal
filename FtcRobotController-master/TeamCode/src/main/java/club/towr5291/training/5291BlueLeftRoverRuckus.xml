@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <Setup id="ID">
+        <BaseWidth>16.5</BaseWidth>
+        <WheelDiameterInches>4</WheelDiameterInches>
+
+        <MotorType>REV_INTERCHANGEABLE</MotorType>
+        <BaseType>MECANUM_2020</BaseType>
+
+        <MotorGearReduction>15</MotorGearReduction>
+        <DriveGearReduction>1</DriveGearReduction>
+
+        <EnableIMU>true</EnableIMU>
+        <EnableVuforia>true</EnableVuforia>
+        <EnableOpenCV>true</EnableOpenCV>
+
+        <EnableVuforiaWebCam>true</EnableVuforiaWebCam>
+    </Setup>
+
+    <Step>
+        <Timeout>3</Timeout>
+        <Command>Drive</Command>
+        <Distance>10</Distance>
+        <Speed>1</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>0</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>0</Parm6>
+    </Step>
+</resources>

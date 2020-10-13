@@ -1,0 +1,27 @@
+//lower the robot down
+2,TILT,.1,.3,TRUE,FALSE,0,0,0,0,0,0
+3,LIFT,14,1,FALSE,FALSE,0,0,0,0,0,0.5
+//move forward X inches
+//2,DRIVE,11,0.5,FALSE,FALSE,0,0,0,0,0,0.5
+//find the GOLD cube, this step will insert a few multiple steps until it finds GOLD
+2,FINDGOLD,0,.8,FALSE,FALSE,0,0,0,0,0,0
+//strafe sideways X inches (Right is -, Left is +)
+//Drive to depot
+//Drop the team marker, this will open the servo for param1 mseconds, also can run as a parallel step so we don't lose the param1 mseconds in time 
+1,STRAFE,-4,1,TRUE,FALSE,0,0,0,0,0,1
+1,TEAMMARKER,0,0,FALSE,FALSE,1,0,0,0,0,0
+// Drive back to the crater
+2,DRIVE,-55,0.8,TRUE,FALSE,1,0,0,0,0,0.5
+2,LIFT,6,1,FALSE,FALSE,0,0,0,0,0,2
+//Drop the team marker, this will open the servo for param1 mseconds, also can run as a parallel step so we don't lose the param1 mseconds in time 
+2,TEAMMARKER,0,0,FALSE,FALSE,0,0,0,0,0,0
+//3,STRAFE,-5,1,TRUE,FALSE,0,0,0,0,0,0.5
+//lower the arm close to the ground so we can attempt to pick up minerals, parameter 2 is to turn off lift power to let it drop by gravity
+2,TILT,-65,1,FALSE,FALSE,0,1,0,0,0,10
+2,LIFT,18,0.5,TRUE,FALSE,0,0,0,0,0,2
+//TURN THE INTAKE ON FOR X Seconds, Param 1 is the timer
+1,INTAKE,0,0.1,FALSE,FALSE,0,0,0,0,0,0
+//TURN THE INTAKE OFF FOR, Param 1 is the timer
+//1,INTAKE,0,0,FALSE,FALSE,1000,0,0,0,0,0
+//This delay must stay there, INSERT steps doesn't work if this dummy step is not in the list a TBD for the future to fix
+1,DELAY,0,0,FALSE,FALSE,0,0,0,0,0,0

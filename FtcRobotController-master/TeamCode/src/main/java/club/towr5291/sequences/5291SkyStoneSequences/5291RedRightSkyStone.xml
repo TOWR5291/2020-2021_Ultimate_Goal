@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <Step>
+        <comment>Strafe left or right an estimated distance,
+            parm 1 how close to object to stop moving towards,
+            parm 2 how far from object to stop going away,
+            negative distance is left, pos is right
+        </comment>
+        <bypassed>0</bypassed>
+        <Timeout>4</Timeout>
+        <Command>STRAFE</Command>
+        <Distance>-18</Distance>
+        <Speed>0.5</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>0</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>0</Parm6>
+    </Step>
+    <Step>
+        <comment>Drives a distance with set speed,
+            parm 1 Turns GYRO on
+            parm 2 heading
+            parm 3 Gain used for gyro correct,
+            parm 4 finds SkyStone (1 for first SkyStone, 2 calculate second SkyStone)
+            parm 5 NOT USED
+            Parm 6 is the distance near the end where the loop ends and goes to next step
+        </comment>
+        <bypassed>0</bypassed>
+        <Timeout>4</Timeout>
+        <Command>DRIVE</Command>
+        <Distance>34</Distance>
+        <Speed>0.75</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>0</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>Turn an angle, if parm 1 is set then turn to a direction relative to the start angle</comment>
+        <bypassed>0</bypassed>
+        <Timeout>1</Timeout>
+        <Command>TANKTURNGYRO</Command>
+        <Distance>90</Distance>
+        <Speed>0.35</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>1</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>Turn an angle, if parm 1 is set then turn to a direction relative to the start angle</comment>
+        <bypassed>0</bypassed>
+        <Timeout>1</Timeout>
+        <Command>TANKTURNGYRO</Command>
+        <Distance>90</Distance>
+        <Speed>0.35</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>1</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+
+    <Step>
+        <comment>Turn an angle, if parm 1 is set then turn to a direction relative to the start angle</comment>
+        <bypassed>0</bypassed>
+        <Timeout>1</Timeout>
+        <Command>TANKTURNGYRO</Command>
+        <Distance>90</Distance>
+        <Speed>0.35</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>1</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>Drives a distance with set speed,
+            parm 1 Turns GYRO on
+            parm 2 heading
+            parm 3 Gain used for gyro correct,
+            parm 4 finds SkyStone (1 for first SkyStone, 2 calculate second SkyStone)
+            parm 5 NOT USED
+            Parm 6 is the distance near the end where the loop ends and goes to next step
+        </comment>
+        <bypassed>0</bypassed>
+        <Timeout>4</Timeout>
+        <Command>DRIVE</Command>
+        <Distance>-20</Distance>
+        <Speed>0.5</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>0</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>Servo to grab the foundation, SPEED is the command, 1 is release the servo, 0 is extend the servo</comment>
+        <bypassed>0</bypassed>
+        <Timeout>1</Timeout>
+        <Command>GRAB</Command>
+        <Distance>0</Distance>
+        <Speed>0</Speed>
+        <Parallel>true</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>0</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>0</Parm6>
+    </Step>
+    <Step>
+        <comment>Timer for Delaying, Parm 1 is the value to delay in milliseconds</comment>
+        <bypassed>0</bypassed>
+        <Timeout>2</Timeout>
+        <Command>DELAY</Command>
+        <Distance>0</Distance>
+        <Speed>0</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>500</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>Turn an angle, if parm 1 is set then turn to a direction relative to the start angle</comment>
+        <bypassed>0</bypassed>
+        <Timeout>1</Timeout>
+        <Command>TANKTURNGYRO</Command>
+        <Distance>100</Distance>
+        <Speed>0.55</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>1</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>Drives a distance with set speed,
+            parm 1 Turns GYRO on
+            parm 2 heading
+            parm 3 Gain used for gyro correct,
+            parm 4 finds SkyStone (1 for first SkyStone, 2 calculate second SkyStone)
+            parm 5 Distance From Wall to stop (direction of travel), if distance is negative uses oposite sensors
+            Parm 6 is the distance near the end where the loop ends and goes to next step
+        </comment>
+        <bypassed>0</bypassed>
+        <Timeout>3</Timeout>
+        <Command>DRIVE</Command>
+        <Distance>28</Distance>
+        <Speed>0.5</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>0</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>2</Parm6>
+    </Step>
+    <Step>
+        <comment>Turn an angle, if parm 1 is set then turn to a direction relative to the start angle</comment>
+        <bypassed>0</bypassed>
+        <Timeout>3</Timeout>
+        <Command>TANKTURNGYRO</Command>
+        <Distance>180</Distance>
+        <Speed>0.55</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>1</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>Turn an angle, if parm 1 is set then turn to a direction relative to the start angle</comment>
+        <bypassed>0</bypassed>
+        <Timeout>1</Timeout>
+        <Command>TANKTURNGYRO</Command>
+        <Distance>180</Distance>
+        <Speed>0.55</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>1</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>Turn an angle, if parm 1 is set then turn to a direction relative to the start angle</comment>
+        <bypassed>0</bypassed>
+        <Timeout>1</Timeout>
+        <Command>TANKTURNGYRO</Command>
+        <Distance>180</Distance>
+        <Speed>0.55</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>1</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>Drives a distance with set speed,
+            parm 1 Turns GYRO on
+            parm 2 heading
+            parm 3 Gain used for gyro correct,
+            parm 4 finds SkyStone (1 for first SkyStone, 2 calculate second SkyStone)
+            parm 5 Distance From Wall to stop (direction of travel), if distance is negative uses oposite sensors
+            Parm 6 is the distance near the end where the loop ends and goes to next step
+        </comment>
+        <bypassed>0</bypassed>
+        <Timeout>3</Timeout>
+        <Command>DRIVE</Command>
+        <Distance>-12</Distance>
+        <Speed>0.5</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>0</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>2</Parm6>
+    </Step>
+    <Step>
+        <comment>Servo to grab the foundation, SPEED is the command, 1 is release the servo, 0 is extend the servo</comment>
+        <bypassed>0</bypassed>
+        <Timeout>1</Timeout>
+        <Command>GRAB</Command>
+        <Distance>0</Distance>
+        <Speed>1</Speed>
+        <Parallel>true</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>0</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>0</Parm6>
+    </Step>
+    <Step>
+        <comment>Drives a distance with set speed,
+            parm 1 Turns GYRO on
+            parm 2 heading
+            parm 3 Gain used for gyro correct,
+            parm 4 finds SkyStone (1 for first SkyStone, 2 calculate second SkyStone)
+            parm 5 Distance From Wall to stop (direction of travel), if distance is negative uses oposite sensors
+            Parm 6 is the distance near the end where the loop ends and goes to next step
+        </comment>
+        <bypassed>0</bypassed>
+        <Timeout>3</Timeout>
+        <Command>DRIVE</Command>
+        <Distance>6</Distance>
+        <Speed>1</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>0</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>2</Parm6>
+    </Step>
+    <Step>
+        <comment>Turn an angle, if parm 1 is set then turn to a direction relative to the start angle</comment>
+        <bypassed>0</bypassed>
+        <Timeout>2</Timeout>
+        <Command>TANKTURNGYRO</Command>
+        <Distance>0</Distance>
+        <Speed>0.5</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>1</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>Turn an angle, if parm 1 is set then turn to a direction relative to the start angle</comment>
+        <bypassed>0</bypassed>
+        <Timeout>1</Timeout>
+        <Command>TANKTURNGYRO</Command>
+        <Distance>0</Distance>
+        <Speed>.5</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>1</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>Turn an angle, if parm 1 is set then turn to a direction relative to the start angle</comment>
+        <bypassed>0</bypassed>
+        <Timeout>1</Timeout>
+        <Command>TANKTURNGYRO</Command>
+        <Distance>0</Distance>
+        <Speed>.5</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>1</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+    <Step>
+        <comment>
+            drive tape measure, 1 is out, 0 is in, parm 1 is the time to run the motor in ms
+        </comment>
+        <Timeout>2</Timeout>
+        <Command>TAPE</Command>
+        <Distance>0</Distance>
+        <Speed>1</Speed>
+        <Parallel>false</Parallel>
+        <Lastpos>false</Lastpos>
+        <Parm1>1000</Parm1>
+        <Parm2>0</Parm2>
+        <Parm3>0</Parm3>
+        <Parm4>0</Parm4>
+        <Parm5>0</Parm5>
+        <Parm6>1</Parm6>
+    </Step>
+</resources>

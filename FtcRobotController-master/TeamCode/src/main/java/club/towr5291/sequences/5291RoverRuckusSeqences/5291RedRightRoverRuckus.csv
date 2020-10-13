@@ -1,0 +1,6 @@
+//lower the robot down
+1,TILT,0.1,.3,TRUE,FALSE,0,0,0,0,0,0
+3,LIFT,15,1,FALSE,FALSE,0,0,0,0,0,1
+//find the GOLD cube, this step will insert a few multiple steps until it finds GOLD
+2,FINDGOLD,0,1,FALSE,FALSE,0,0,0,0,0,0
+1,DELAY,0,0,FALSE,FALSE,0,0,0,0,0,0

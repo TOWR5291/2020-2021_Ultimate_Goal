@@ -1,0 +1,4 @@
+10,TANKTURNGYRO,90,1,FALSE,FALSE,0,0,0,0,0,0
+10,TANKTURNGYRO,180,1,FALSE,FALSE,0,0,0,0,0,0
+//This delay must stay there, INSERT steps doesn't work if this dummy step is not in the list a TBD for the future to fix
+1,DELAY,0,0,FALSE,FALSE,0,0,0,0,0,0
