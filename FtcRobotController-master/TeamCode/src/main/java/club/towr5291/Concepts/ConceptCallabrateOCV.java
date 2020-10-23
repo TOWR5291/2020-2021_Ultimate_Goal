@@ -10,6 +10,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.Gamepad;
 import com.qualcomm.robotcore.util.ElapsedTime;
+import com.vuforia.CameraCalibration;
 import com.vuforia.HINT;
 import com.vuforia.Image;
 import com.vuforia.Matrix34F;
@@ -251,7 +252,7 @@ public class ConceptCallabrateOCV extends OpModeMasterLinear
         //} catch (RuntimeException e) {
         //    Log.e("Camera Error Open", e.getMessage());
         //}
-        for (VuforiaTrackable trackable : roverTrackables) {
+ /*       for (VuforiaTrackable trackable : roverTrackables) {
 
             OpenGLMatrix pose = ((VuforiaTrackableDefaultListener) trackable.getListener()).getRawPose();
 
@@ -261,10 +262,12 @@ public class ConceptCallabrateOCV extends OpModeMasterLinear
                 float[] poseData = Arrays.copyOfRange(pose.transposed().getData(), 0, 12);
                 rawPose.setData(poseData);
 
-                Vec2F upperLeft = Tool.projectPoint(vuforia.getCameraCalibration(), rawPose, new Vec3F(-TARGET_WIDTH / 2, TARGET_HEIGHT / 2, 0));
-                Vec2F upperRight = Tool.projectPoint(vuforia.getCameraCalibration(), rawPose, new Vec3F(TARGET_WIDTH / 2, TARGET_HEIGHT / 2, 0));
-                Vec2F lowerRight = Tool.projectPoint(vuforia.getCameraCalibration(), rawPose, new Vec3F(TARGET_WIDTH / 2, -TARGET_HEIGHT / 2, 0));
-                Vec2F lowerLeft = Tool.projectPoint(vuforia.getCameraCalibration(), rawPose, new Vec3F(-TARGET_WIDTH / 2, -TARGET_HEIGHT / 2, 0));
+
+
+             //   Vec2F upperLeft = Tool.projectPoint(vuforia.getCameraCalibration(), rawPose, new Vec3F(-TARGET_WIDTH / 2, TARGET_HEIGHT / 2, 0));
+              //  Vec2F upperRight = Tool.projectPoint(vuforia.getCameraCalibration(), rawPose, new Vec3F(TARGET_WIDTH / 2, TARGET_HEIGHT / 2, 0));
+             //   Vec2F lowerRight = Tool.projectPoint(vuforia.getCameraCalibration(), rawPose, new Vec3F(TARGET_WIDTH / 2, -TARGET_HEIGHT / 2, 0));
+             //   Vec2F lowerLeft = Tool.projectPoint(vuforia.getCameraCalibration(), rawPose, new Vec3F(-TARGET_WIDTH / 2, -TARGET_HEIGHT / 2, 0));
 
                 double dblMidPointTopx = (upperRight.getData()[0] + upperLeft.getData()[0]) / 2;
                 double dblMidPointTopy = (upperRight.getData()[1] + upperLeft.getData()[1]) / 2;
@@ -304,7 +307,7 @@ public class ConceptCallabrateOCV extends OpModeMasterLinear
                     //fileLogger.writeEvent(1,"Vuforia", "OOOPS" );
                 }
             }
-        }
+        }*/
 
         VuforiaLocalizer.CloseableFrame frame = vuforia.getFrameQueue().take(); //takes the frame at the head of the queue
 

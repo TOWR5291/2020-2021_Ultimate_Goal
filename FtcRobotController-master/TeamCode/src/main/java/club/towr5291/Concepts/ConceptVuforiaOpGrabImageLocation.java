@@ -257,7 +257,7 @@ public class ConceptVuforiaOpGrabImageLocation extends LinearOpMode{
             //    image.copyPixelsFromBuffer(vuforia.rgb.getPixels());
             //}
 
-            for (VuforiaTrackable beac : velocityVortex) {
+  /*          for (VuforiaTrackable beac : velocityVortex) {
 
                 OpenGLMatrix pose = ((VuforiaTrackableDefaultListener) beac.getListener()).getRawPose();
 
@@ -274,7 +274,7 @@ public class ConceptVuforiaOpGrabImageLocation extends LinearOpMode{
 
                 }
 
-            }
+            }      */
             for (VuforiaTrackable trackable : allTrackables) {
                 /**
                  * getUpdatedRobotLocation() will return null if no new information is available since

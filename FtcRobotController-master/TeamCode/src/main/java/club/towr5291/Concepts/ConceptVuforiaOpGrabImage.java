@@ -406,7 +406,7 @@ public class ConceptVuforiaOpGrabImage extends OpModeMasterLinear
         //}
         while (opModeIsActive()) {
 
-            for (VuforiaTrackable jewel : RelicRecovery) {
+   /*         for (VuforiaTrackable jewel : RelicRecovery) {
 
                 OpenGLMatrix pose = ((VuforiaTrackableDefaultListener) jewel.getListener()).getRawPose();
 
@@ -460,7 +460,7 @@ public class ConceptVuforiaOpGrabImage extends OpModeMasterLinear
                         }
                     }
                 }
-            }
+            }  */
 
             VuforiaLocalizer.CloseableFrame frame = vuforia.getFrameQueue().take(); //takes the frame at the head of the queue
 

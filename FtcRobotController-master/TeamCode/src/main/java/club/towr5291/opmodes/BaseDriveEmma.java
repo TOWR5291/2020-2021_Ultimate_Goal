@@ -161,16 +161,16 @@ public class BaseDriveEmma extends OpModeMasterLinear {
 
             //send the tape measure out
             if (gamepad2.dpad_up)
-            {robotArms.tapeMotor.setPower(1);
+            {robotArms.tapeMotor.setPower(-1);
                 robotArms.tapeMotor2.setPower(-1);}
             else if (gamepad2.dpad_right)
-            {robotArms.tapeMotor.setPower(0.75);
+            {robotArms.tapeMotor.setPower(-0.75);
                 robotArms.tapeMotor2.setPower(-0.75);}
             else if (gamepad2.dpad_down)
-            {robotArms.tapeMotor.setPower(0.5);
+            {robotArms.tapeMotor.setPower(-0.5);
                 robotArms.tapeMotor2.setPower(-0.5);}
             else if (gamepad2.dpad_left)
-            {robotArms.tapeMotor.setPower(0.25);
+            {robotArms.tapeMotor.setPower(-0.25);
                 robotArms.tapeMotor2.setPower(-0.25);}
             else
             { robotArms.tapeMotor.setPower(0);

@@ -349,7 +349,7 @@ public class ConceptCallabrateSkyStoneOCV extends OpModeMasterLinear
 
             OpenGLMatrix pose = ((VuforiaTrackableDefaultListener) trackable.getListener()).getRawPose();
 
-            if (pose != null) {
+/*            if (pose != null) {
 
                 Matrix34F rawPose = new Matrix34F();
                 float[] poseData = Arrays.copyOfRange(pose.transposed().getData(), 0, 12);
@@ -398,7 +398,7 @@ public class ConceptCallabrateSkyStoneOCV extends OpModeMasterLinear
                     //fileLogger.writeEvent(1,"Vuforia", "OOOPS" );
                 }
             }
-        }
+        }*/
 
         VuforiaLocalizer.CloseableFrame frame = vuforia.getFrameQueue().take(); //takes the frame at the head of the queue
 
@@ -428,12 +428,12 @@ public class ConceptCallabrateSkyStoneOCV extends OpModeMasterLinear
         dashboard.displayPrintf(2, "Calibatrate " + calibrate);
         Colour = elementColour.SkyStoneOCV(fileLogger, dashboard, tmp, 0, false, 7, calibrate);
 
-        for (VuforiaTrackable trackable : allTrackables) {
-            /**
-             * getUpdatedRobotLocation() will return null if no new information is available since
-             * the last time that call was made, or if the trackable is not currently visible.
-             * getRobotLocation() will return null if the trackable is not currently visible.
-             */
+/*        for (VuforiaTrackable trackable : allTrackables) {
+
+            // * getUpdatedRobotLocation() will return null if no new information is available since
+            // * the last time that call was made, or if the trackable is not currently visible.
+            // * getRobotLocation() will return null if the trackable is not currently visible.
+            //
             //telemetry.addData(trackable.getName(), ((VuforiaTrackableDefaultListener)trackable.getListener()).isVisible() ? "Visible" : "Not Visible");    //
 
             OpenGLMatrix robotLocationTransform = ((VuforiaTrackableDefaultListener)trackable.getListener()).getUpdatedRobotLocation();
@@ -505,11 +505,12 @@ public class ConceptCallabrateSkyStoneOCV extends OpModeMasterLinear
         }
     }
 
-    /**
-     * A simple utility that extracts positioning information from a transformation matrix
-     * and formats it in a form palatable to a human being.
-     */
+
+     // * A simple utility that extracts positioning information from a transformation matrix
+     // * and formats it in a form palatable to a human being.
+
     String format(OpenGLMatrix transformationMatrix) {
         return transformationMatrix.formatAsTransform();
     }
-}
+
+        }*/}}}

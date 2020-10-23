@@ -45,8 +45,6 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorEx;
-import com.qualcomm.robotcore.hardware.PIDCoefficients;
 import com.qualcomm.robotcore.hardware.VoltageSensor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
@@ -83,7 +81,6 @@ import club.towr5291.functions.TOWR5291TextToSpeech;
 import club.towr5291.libraries.ImageCaptureOCV;
 import club.towr5291.libraries.LibraryMotorType;
 import club.towr5291.libraries.LibraryStateSegAutoRoverRuckus;
-import club.towr5291.libraries.LibraryTensorFlowRoverRuckus;
 import club.towr5291.libraries.LibraryVuforiaRoverRuckus;
 import club.towr5291.libraries.TOWRDashBoard;
 import club.towr5291.libraries.TOWR5291LEDControl;
@@ -287,7 +284,7 @@ public class AutoDriveTeam5291RoverRuckus extends OpModeMasterLinear {
     private RoverRuckusOCV elementColour = new RoverRuckusOCV();
 
     private ImageCaptureOCV imageCaptureOCV = new ImageCaptureOCV();
-    private LibraryTensorFlowRoverRuckus tensorFlowRoverRuckus = new LibraryTensorFlowRoverRuckus();
+ //   private LibraryTensorFlowRoverRuckus tensorFlowRoverRuckus = new LibraryTensorFlowRoverRuckus();
 
     private int mintNumberColourTries = 0;
     private Constants.ObjectColours mColour;
