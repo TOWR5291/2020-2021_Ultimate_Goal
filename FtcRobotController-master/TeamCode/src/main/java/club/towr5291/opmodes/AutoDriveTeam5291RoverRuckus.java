@@ -492,7 +492,7 @@ public class AutoDriveTeam5291RoverRuckus extends OpModeMasterLinear {
             RoverRuckusTrackables = RoverRuckusVuforia.LibraryVuforiaRoverRuckus(hardwareMap, ourRobotConfig, false);
         }
 
-        imageCaptureOCV.initImageCaptureOCV(RoverRuckusVuforia, dashboard, fileLogger);
+        //imageCaptureOCV.initImageCaptureOCV(RoverRuckusVuforia, dashboard, fileLogger);
         //tensorFlowRoverRuckus.initTensorFlow(RoverRuckusVuforia.getVuforiaLocalizer(), hardwareMap, fileLogger, "RoverRuckus.tflite", "GOLD", "SILVER", true);
 
         fileLogger.writeEvent(3,"MAIN","Configured Vuforia - About to Activate");

@@ -79,6 +79,7 @@ import club.towr5291.libraries.ImageCaptureOCV;
 import club.towr5291.libraries.LibraryMotorType;
 import club.towr5291.libraries.LibraryStateSegAutoRoverRuckus;
 import club.towr5291.libraries.LibraryVuforiaRoverRuckus;
+import club.towr5291.libraries.LibraryVuforiaUltimateGoal;
 import club.towr5291.libraries.TOWRDashBoard;
 import club.towr5291.libraries.robotConfig;
 import club.towr5291.libraries.robotConfigSettings;
@@ -536,24 +537,24 @@ public class AutoDriveTeam5291UltimateGoal extends OpModeMasterLinear {
         fileLogger.writeEvent(3, "OpenCV Started");
 
         //load all the vuforia stuff
-        LibraryVuforiaRoverRuckus RoverRuckusVuforia = new LibraryVuforiaRoverRuckus();
-        VuforiaTrackables RoverRuckusTrackables;
+        LibraryVuforiaUltimateGoal UltimateGoalVuforia = new LibraryVuforiaUltimateGoal();
+        VuforiaTrackables UltimateGoalTrackables;
 
         if (vuforiaWebcam) {
             robotWebcam = hardwareMap.get(WebcamName.class, "Webcam1");
-            RoverRuckusTrackables = RoverRuckusVuforia.LibraryVuforiaRoverRuckus(hardwareMap, ourRobotConfig, robotWebcam, false);
+            UltimateGoalTrackables = UltimateGoalVuforia.LibraryVuforiaUltimateGoal(hardwareMap, ourRobotConfig, robotWebcam, false);
         } else{
-            RoverRuckusTrackables = RoverRuckusVuforia.LibraryVuforiaRoverRuckus(hardwareMap, ourRobotConfig, false);
+            UltimateGoalTrackables = UltimateGoalVuforia.LibraryVuforiaUltimateGoal(hardwareMap, ourRobotConfig, robotWebcam, false);
         }
 
-        imageCaptureOCV.initImageCaptureOCV(RoverRuckusVuforia, dashboard, fileLogger);
+        imageCaptureOCV.initImageCaptureOCV(UltimateGoalVuforia, dashboard, fileLogger);
         //tensorFlowRoverRuckus.initTensorFlow(RoverRuckusVuforia.getVuforiaLocalizer(), hardwareMap, fileLogger, "RoverRuckus.tflite", "GOLD", "SILVER", true);
 
         fileLogger.writeEvent(3,"MAIN","Configured Vuforia - About to Activate");
         dashboard.displayPrintf(10, "Configured Vuforia - About to Activate");
 
         //activate vuforia
-        RoverRuckusTrackables.activate();
+        UltimateGoalTrackables.activate();
 
         fileLogger.writeEvent(3,"MAIN", "Activated Vuforia");
 
@@ -1072,11 +1073,11 @@ public class AutoDriveTeam5291UltimateGoal extends OpModeMasterLinear {
                     fileLogger.writeEvent(3, "runningDriveHeadingStep", "Heading " + mdblRobotParm2);
 
                     // if driving in reverse, the motor correction also needs to be reversed
-                    if (mdblStepDistance < 0)
+                    if (mdblStepDistance > 0)
                         dblSteer *= -1.0;
 
-                    dblStepSpeedTempLeft = dblStepSpeedTempLeft - dblSteer;
-                    dblStepSpeedTempRight = dblStepSpeedTempRight + dblSteer;
+                    dblStepSpeedTempLeft = dblStepSpeedTempLeft + dblSteer;
+                    dblStepSpeedTempRight = dblStepSpeedTempRight - dblSteer;
 
                     // Normalize speeds if any one exceeds +/- 1.0;
                     dblMaxSpeed = Math.max(Math.abs(dblStepSpeedTempLeft), Math.abs(dblStepSpeedTempRight));
@@ -1857,10 +1858,10 @@ public class AutoDriveTeam5291UltimateGoal extends OpModeMasterLinear {
                 mdblGyrozAccumulated = adafruitIMUHeading;
                 mdblGyrozAccumulated = teamAngleAdjust(mdblGyrozAccumulated);//Set variables to MRgyro readings
                 //mdblTurnAbsoluteGyro = Double.parseDouble(newAngleDirectionGyro((int) mdblGyrozAccumulated, (int) mdblRobotTurnAngle).substring(3));
-                String mstrDirection = (newAngleDirectionGyro((int) mdblGyrozAccumulated, (int) mdblRobotTurnAngle).substring(0, 3));
+                //String mstrDirection = (newAngleDirectionGyro((int) mdblGyrozAccumulated, (int) mdblRobotTurnAngle).substring(0, 3));
                 fileLogger.writeEvent(3, "Running, mdblGyrozAccumulated = " + mdblGyrozAccumulated);
                 fileLogger.writeEvent(3, "Running, mdblTurnAbsoluteGyro = " + mdblTurnAbsoluteGyro);
-                fileLogger.writeEvent(3, "Running, mstrDirection        = " + mstrDirection);
+                //fileLogger.writeEvent(3, "Running, mstrDirection        = " + mstrDirection);
                 fileLogger.writeEvent(3, "Running, adafruitIMUHeading   = " + adafruitIMUHeading);
 
                 intLeft1MotorEncoderPosition = robotDrive.baseMotor1.getCurrentPosition();
@@ -2940,18 +2941,20 @@ public class AutoDriveTeam5291UltimateGoal extends OpModeMasterLinear {
         if (ourRobotConfig.getAllianceColor().equals("Red")) {
             //angle = angle + 90;  if starting against the wall
             //angle = angle + 225; if starting at 45 to the wall facing the beacon
-            angle = angle + 225;
+            angle = angle + 0;
             if (angle > 360) {
                 angle = angle - 360;
-            }
+            //angle = angle +0;
+        }
             fileLogger.writeEvent(2,"In RED Angle " + angle);
 
         } else
         if (ourRobotConfig.getAllianceColor().equals("Blue")) {
             //angle = angle - 180;;  if starting against the wall
-            angle = angle - 135;
+            //angle = angle - 135;
             if (angle < 0) {
                 angle = angle + 360;
+            //angle = angle +0;
             }
         }
         return angle;
@@ -3075,7 +3078,7 @@ public class AutoDriveTeam5291UltimateGoal extends OpModeMasterLinear {
             robotError += 360;
 
         fileLogger.writeEvent(2,"robotError2 " + robotError);
-        return -robotError;
+        return robotError;
     }
 
     /**

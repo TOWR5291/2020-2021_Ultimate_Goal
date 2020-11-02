@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.widget.TextView;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
@@ -29,6 +30,7 @@ import club.towr5291.robotconfig.HardwareDriveMotors;
     Xavier was here:>
 */
 @TeleOp(name = "Base Drive 2020", group = "5291")
+@Disabled
 public class BaseDrive_2020 extends OpModeMasterLinear {
     private Constants.stepState stepState = Constants.stepState.STATE_COMPLETE;
     boolean hold = false;

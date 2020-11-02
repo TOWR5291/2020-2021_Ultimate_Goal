@@ -55,6 +55,7 @@ public class LibraryVuforiaRoverRuckus {
     private float mmTargetHeight   = (6) * mmPerInch;          // the height of the center of the target image above the floor
 
 
+
     private static final VuforiaLocalizer.CameraDirection CAMERA_CHOICE = BACK;
     
     public VuforiaTrackables getRoverRuckus() { return this.RoverRuckus; }

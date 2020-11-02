@@ -147,11 +147,16 @@ public class BaseDriveEmma extends OpModeMasterLinear {
             liftMotorPower();
             robotArms.intakeMotor1.setPower(gamepad2.left_trigger - gamepad2.right_trigger);
 
-            // grab the block
+            // ejector
             if (gamepad2.a)
                 robotArms.grabServo.setPosition(0);
             else if (gamepad2.y)
-                robotArms.grabServo.setPosition(.5);
+                robotArms.grabServo.setPosition(.3);
+             // test
+             //  if (gamepad2.a)
+              //     robotArms.grabServo.setPosition(0);
+             // else if (gamepad2.y)
+             //      robotArms.grabServo.setPosition(1);
 
             //rotate the arm out so we can stack the block or bring it back in
             if (gamepad2.b)
@@ -161,27 +166,30 @@ public class BaseDriveEmma extends OpModeMasterLinear {
 
             //send the tape measure out
             if (gamepad2.dpad_up)
-            {robotArms.tapeMotor.setPower(-1);
-                robotArms.tapeMotor2.setPower(-1);}
-            else if (gamepad2.dpad_right)
             {robotArms.tapeMotor.setPower(-0.75);
-                robotArms.tapeMotor2.setPower(-0.75);}
+            }
+            else if (gamepad2.dpad_right)
+            {robotArms.tapeMotor.setPower(-0.7);
+            }
             else if (gamepad2.dpad_down)
-            {robotArms.tapeMotor.setPower(-0.5);
-                robotArms.tapeMotor2.setPower(-0.5);}
+            {robotArms.tapeMotor.setPower(-0.69);
+            }
             else if (gamepad2.dpad_left)
-            {robotArms.tapeMotor.setPower(-0.25);
-                robotArms.tapeMotor2.setPower(-0.25);}
+            {robotArms.tapeMotor.setPower(-0.68);
+            }
             else
             { robotArms.tapeMotor.setPower(0);
-                robotArms.tapeMotor2.setPower(0);}
-            //Foundation Arm
-
+            }
+            //Intake testing
             if (gamepad2.left_bumper)
-                robotArms.foundationServo.setPosition(0);
-            else if (gamepad2.right_bumper)
-                robotArms.foundationServo.setPosition(1);
+                robotArms.tapeMotor2.setPower(1.0);
+            else
+                robotArms.tapeMotor2.setPower(0);
 
+//            if (gamepad2.left_bumper)
+ //               robotArms.foundationServo.setPosition(1);
+  //          else if (gamepad2.right_bumper)
+    //            robotArms.foundationServo.setPosition(0);
         }
         //stop the logging
         if (fileLogger != null) {

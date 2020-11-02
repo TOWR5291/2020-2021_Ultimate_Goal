@@ -42,6 +42,7 @@ import android.widget.TextView;
 import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.hardware.bosch.JustLoggingAccelerationIntegrator;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.PIDFCoefficients;
@@ -118,7 +119,7 @@ Written by Ian Haden/Wyatt Ashley October 2018
 */
 
 @Autonomous(name="5291 Autonomous Drive Sky Stone", group="5291")
-//@Disabled
+@Disabled
 public class AutoDriveTeam5291SkyStone extends OpModeMasterLinear {
 
     private OpMode onStop = this;
@@ -542,7 +543,7 @@ public class AutoDriveTeam5291SkyStone extends OpModeMasterLinear {
             RoverRuckusTrackables = RoverRuckusVuforia.LibraryVuforiaRoverRuckus(hardwareMap, ourRobotConfig, false);
         }
 
-        imageCaptureOCV.initImageCaptureOCV(RoverRuckusVuforia, dashboard, fileLogger);
+       // imageCaptureOCV.initImageCaptureOCV(RoverRuckusVuforia, dashboard, fileLogger);
         //tensorFlowRoverRuckus.initTensorFlow(RoverRuckusVuforia.getVuforiaLocalizer(), hardwareMap, fileLogger, "RoverRuckus.tflite", "GOLD", "SILVER", true);
 
         fileLogger.writeEvent(3,"MAIN","Configured Vuforia - About to Activate");

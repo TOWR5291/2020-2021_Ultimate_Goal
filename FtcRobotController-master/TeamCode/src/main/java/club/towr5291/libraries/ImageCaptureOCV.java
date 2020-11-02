@@ -25,7 +25,7 @@ import static org.opencv.core.Core.countNonZero;
 
 public class ImageCaptureOCV {
 
-    private LibraryVuforiaRoverRuckus libraryVuforiaRoverRuckus;
+    private LibraryVuforiaUltimateGoal libraryVuforiaUltimateGoal;
     private Mat currentMat;
     private TOWRDashBoard dash;
     private FileLogger logger;
@@ -41,8 +41,8 @@ public class ImageCaptureOCV {
         //Nothing in here yet
     }
 
-    public void initImageCaptureOCV(LibraryVuforiaRoverRuckus libraryVuforiaRoverRuckus, TOWRDashBoard dashBoard, FileLogger fileLogger) {
-        this.libraryVuforiaRoverRuckus = libraryVuforiaRoverRuckus;
+    public void initImageCaptureOCV(LibraryVuforiaUltimateGoal libraryVuforiaUltimateGoal, TOWRDashBoard dashBoard, FileLogger fileLogger) {
+        this.libraryVuforiaUltimateGoal = libraryVuforiaUltimateGoal;
         this.currentMat = new Mat();
         this.dash = dashBoard;
         this.logger = fileLogger;
@@ -52,7 +52,7 @@ public class ImageCaptureOCV {
     public void takeImage(OnImageCapture onImageCapture) {
 
          try {
-        VuforiaLocalizer.CloseableFrame frame = this.libraryVuforiaRoverRuckus.getVuforia().getFrameQueue().take();
+        VuforiaLocalizer.CloseableFrame frame = this.libraryVuforiaUltimateGoal.getVuforia().getFrameQueue().take();
         ///  this.libraryVuforiaRoverRuckus.getVuforia().getFrameOnce(Continuation.create(ThreadPool.getDefault(), new Consumer<Frame>() {
         //VuforiaLocalizer.CloseableFrame frame = this.
         ///        @Override
