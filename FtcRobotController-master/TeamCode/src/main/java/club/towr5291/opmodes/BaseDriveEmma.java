@@ -27,7 +27,7 @@ import club.towr5291.robotconfig.HardwareDriveMotors;
 
 
 /*
-    made by Emma Beggs 11-15-20
+    made by Emma Beggs 11-15-20  ^^^^
 */
 @TeleOp(name = "BaseDriveEmma", group = "5291")
 public class BaseDriveEmma extends OpModeMasterLinear {
@@ -184,7 +184,7 @@ public class BaseDriveEmma extends OpModeMasterLinear {
             } else if (gamepad2.dpad_left) {
                 //robotArms.flywheelMotor.setPower(-0.68);
                 //robotArms.flywheelMotor.setPower(-0.61);
-                robotArms.flywheelMotor.setVelocity(-1500);
+                robotArms.flywheelMotor.setVelocity(-1475);
                 telemetry.update();
                 telemetry.clearAll();
                 double mitch = robotArms.flywheelMotor.getVelocity();
